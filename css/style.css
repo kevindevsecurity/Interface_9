@@ -1,0 +1,285 @@
+/* =========================================
+   RESET E VARIÁVEIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --bg-blue: #dbebf7;        
+    --mailchimp-teal: #007c89; 
+    --text-dark: #241c15;      
+    --card-pink: #ffe0d6;      
+    --text-salmon: #e27d60;    
+    --btn-checkout-bg: #1a564d; 
+}
+
+body {
+    background-color: var(--bg-blue);
+    color: var(--text-dark);
+    overflow-x: hidden; 
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+header {
+    padding: 20px 40px;
+    background-color: var(--bg-blue);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+
+.logo {
+    width: 140px;
+    mix-blend-mode: multiply; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons {
+    height: 22px;
+    cursor: pointer;
+    mix-blend-mode: multiply; 
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border: 1px solid var(--text-dark);
+    transition: 0.3s;
+    background: transparent; 
+}
+
+.btn-signup {
+    text-decoration: none;
+    background-color: var(--mailchimp-teal);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 11px 22px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* =========================================
+   HERO SECTION (PRINCIPAL)
+   ========================================= */
+.hero-section {
+    display: flex;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Coluna Texto --- */
+.hero-text {
+    width: 45%;
+}
+
+.hero-text h1 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3.8rem;
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    font-weight: 300;
+    color: #403b3b;
+    max-width: 90%;
+}
+
+.btn-cta {
+    background-color: var(--mailchimp-teal);
+    color: white;
+    border: none;
+    padding: 18px 38px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Coluna Gráficos --- */
+.hero-graphics {
+    width: 50%; 
+    position: relative;
+    height: 600px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+/* Janela Rosa */
+.browser-window {
+    background-color: var(--card-pink);
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 480px; 
+    height: 400px; 
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.dots {
+    height: 8px;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+}
+
+.mini-cart-icon {
+    height: 14px;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+}
+
+.window-title {
+    text-align: center;
+    color: var(--text-salmon);
+    font-family: 'Arial', sans-serif; 
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* Quadrado Azul (Container do Pote) */
+.product-display {
+    width: 250px;
+    height: 250px;
+    margin-left: 15px; 
+    position: relative;
+    background-color: #001c40; 
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+}
+
+/* Cartão do Carrinho */
+.shopping-cart-card {
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 50px;  
+    right: 10px;   
+    width: 230px; 
+    padding: 20px;
+    z-index: 10; 
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.4);
+}
+
+.cart-header {
+    font-family: 'Times New Roman', serif; 
+    font-size: 1.3rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.cart-items img {
+    width: 100%;
+    display: block;
+    mix-blend-mode: multiply; 
+}
+
+.btn-checkout { 
+    display: block; 
+    width: 100%;
+    background-color: var(--btn-checkout-bg); 
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+    .hero-text, .hero-graphics { width: 100%; }
+    .hero-text { text-align: center; margin-bottom: 40px; }
+    .hero-graphics { 
+        display: block; 
+        height: 500px; 
+        margin: 0 auto; 
+    }
+    .browser-window { width: 90%; margin: 0 auto; height: 380px; }
+    
+    .product-display { margin: 0 auto; }
+
+    .shopping-cart-card { 
+        right: 5%; 
+        bottom: 10px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-left { display: none; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .product-display { width: 200px; height: 200px; } 
+    .browser-window { height: 340px; }
+    .shopping-cart-card { width: 180px; bottom: 0px; right: 0; }
+}
